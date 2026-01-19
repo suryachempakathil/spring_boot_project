@@ -5,16 +5,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.service.FactorialService;
+import com.service.PrimeService;
 
 @RestController
-public class FactorialController {
-	 @Autowired
-	 FactorialService factorialService;
-	  @GetMapping(value="factorial/{num}")
-	  public double getfactorial(@PathVariable int num) {
-		  return factorialService.checkfactorial(num);
-	  }
-		  
+public class PrimeController {
+	@Autowired
+	PrimeService primeService;
+	@GetMapping(value="prime/{num}")
+	public String primenumber(@PathVariable int num) {
+		return primeService.checkprime(num);
+	}
 
 }

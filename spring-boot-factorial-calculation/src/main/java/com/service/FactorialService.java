@@ -9,7 +9,7 @@ public double checkfactorial(int num) {
 		throw new IllegalArgumentException("Invalid Input");
 	}
 	double fact=1;
-	for(int i=0;i<num;i++) {
+	for(int i=1;i<=num;i++) {
 		fact = fact * i;
 	}
 	return fact;
